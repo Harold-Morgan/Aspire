@@ -5,7 +5,7 @@ namespace CommunityToolkit.Aspire.Hosting.Minio.Tests;
 public class ResourceCreationTests
 {
     [Fact]
-    public void MinioResourseGetsAdded()
+    public void MinioResourceGetsAdded()
     {
         var builder = DistributedApplication.CreateBuilder();
 

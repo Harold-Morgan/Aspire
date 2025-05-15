@@ -13,7 +13,7 @@ public sealed class MinioContainerResource(
     IResourceWithConnectionString
 {
     internal const string PrimaryEndpointName = "http";
-    internal const string DefaultUserName = "admin";
+    internal const string DefaultUserName = "minioadmin";
 
     /// <summary>
     /// The MiniO root user.
