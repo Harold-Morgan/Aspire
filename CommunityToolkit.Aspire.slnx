@@ -14,6 +14,11 @@
   <Folder Name="/examples/bun/">
     <Project Path="examples/bun/CommunityToolkit.Aspire.Hosting.Bun.AppHost/CommunityToolkit.Aspire.Hosting.Bun.AppHost.csproj" />
   </Folder>
+  <Folder Name="/examples/clickhouse/">
+    <Project Path="examples/clickhouse/CommunityToolkit.Aspire.Hosting.ClickHouse.AppHost/CommunityToolkit.Aspire.Hosting.ClickHouse.AppHost.csproj" />
+    <Project Path="examples/clickhouse/CommunityToolkit.Aspire.Hosting.ClickHouse.ServiceDefaults/CommunityToolkit.Aspire.Hosting.ClickHouse.ServiceDefaults.csproj" />
+    <Project Path="examples\clickhouse\CommunityToolkit.Aspire.Hosting.ClickHouse.ApiService\CommunityToolkit.Aspire.Hosting.ClickHouse.ApiService.csproj" />
+  </Folder>
   <Folder Name="/examples/dapr/">
     <Project Path="examples/dapr/CommunityToolkit.Aspire.Hosting.Azure.Dapr.AppHost/CommunityToolkit.Aspire.Hosting.Azure.Dapr.AppHost.csproj" />
     <Project Path="examples/dapr/CommunityToolkit.Aspire.Hosting.Dapr.AppHost/CommunityToolkit.Aspire.Hosting.Dapr.AppHost.csproj" />
@@ -192,6 +197,7 @@
     <Project Path="src/CommunityToolkit.Aspire.Hosting.Azure.DataApiBuilder/CommunityToolkit.Aspire.Hosting.Azure.DataApiBuilder.csproj" />
     <Project Path="src/CommunityToolkit.Aspire.Hosting.Azure.Extensions/CommunityToolkit.Aspire.Hosting.Azure.Extensions.csproj" />
     <Project Path="src/CommunityToolkit.Aspire.Hosting.Bun/CommunityToolkit.Aspire.Hosting.Bun.csproj" />
+    <Project Path="src/CommunityToolkit.Aspire.Hosting.ClickHouse/CommunityToolkit.Aspire.Hosting.ClickHouse.csproj" />
     <Project Path="src/CommunityToolkit.Aspire.Hosting.DbGate/CommunityToolkit.Aspire.Hosting.DbGate.csproj" />
     <Project Path="src/CommunityToolkit.Aspire.Hosting.Deno/CommunityToolkit.Aspire.Hosting.Deno.csproj" />
     <Project Path="src/CommunityToolkit.Aspire.Hosting.Elasticsearch.Extensions/CommunityToolkit.Aspire.Hosting.Elasticsearch.Extensions.csproj" />
