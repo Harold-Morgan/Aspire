@@ -1,5 +1,6 @@
 using Aspire.Hosting.ApplicationModel;
 using CommunityToolkit.Aspire.Hosting.Garage;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Aspire.Hosting;
 
@@ -35,7 +36,7 @@ public static class GarageBuilderExtensions
 
         var resource = new GarageContainerResource(name, adminToken, config);
 
-        return builder.AddResource(resource)
+        var builderWithResource = builder.AddResource(resource)
             .WithImage(GarageContainerImageTags.Image, GarageContainerImageTags.Tag)
             .WithImageRegistry(GarageContainerImageTags.Registry)
             .WithHttpEndpoint(
@@ -50,6 +51,20 @@ public static class GarageBuilderExtensions
                 var token = await resource.AdminToken.GetValueAsync(ct).ConfigureAwait(false);
                 return [new ContainerFile { Name = "garage.toml", Contents = config.Build(token!) }];
             });
+
+        // Register a health check that initializes the single-node cluster layout
+        // on first successful connection to the admin API, then verifies it stays responsive.
+        var adminEndpoint = builderWithResource.Resource.GetEndpoint(GarageContainerResource.AdminEndpointName);
+        var healthCheckKey = $"{name}_check";
+
+        builder.Services.AddHealthChecks()
+            .AddCheck(healthCheckKey, new GarageLayoutHealthCheck(
+                getAdminUrl: () => adminEndpoint.Url,
+                getAdminToken: ct => resource.AdminToken.GetValueAsync(ct)));
+
+        builderWithResource.WithHealthCheck(healthCheckKey);
+
+        return builderWithResource;
     }
 
     /// <summary>

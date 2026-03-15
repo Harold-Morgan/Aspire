@@ -244,6 +244,7 @@
     <Project Path="src/CommunityToolkit.Aspire.Meilisearch/CommunityToolkit.Aspire.Meilisearch.csproj" />
     <Project Path="src/CommunityToolkit.Aspire.Microsoft.Data.Sqlite/CommunityToolkit.Aspire.Microsoft.Data.Sqlite.csproj" />
     <Project Path="src/CommunityToolkit.Aspire.Microsoft.EntityFrameworkCore.Sqlite/CommunityToolkit.Aspire.Microsoft.EntityFrameworkCore.Sqlite.csproj" />
+    <Project Path="src/CommunityToolkit.Aspire.AwsSdk.S3.Client/CommunityToolkit.Aspire.AwsSdk.S3.Client.csproj" />
     <Project Path="src/CommunityToolkit.Aspire.Minio.Client/CommunityToolkit.Aspire.Minio.Client.csproj" />
     <Project Path="src/CommunityToolkit.Aspire.OllamaSharp/CommunityToolkit.Aspire.OllamaSharp.csproj" />
     <Project Path="src/CommunityToolkit.Aspire.RavenDB.Client/CommunityToolkit.Aspire.RavenDB.Client.csproj" />

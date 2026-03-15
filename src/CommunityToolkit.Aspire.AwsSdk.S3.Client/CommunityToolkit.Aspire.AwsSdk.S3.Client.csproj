@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>An Aspire client integration for AWS S3 (and S3-compatible storage)</Description>
+    <AdditionalPackageTags>aws s3 client cloud storage</AdditionalPackageTags>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="CommunityToolkit.Aspire.Hosting.Garage.Tests" />
+  </ItemGroup>
+
+</Project>
