@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>An Aspire hosting integration for Garage, a self-hosted S3-compatible object storage service.</Description>
+    <AdditionalPackageTags>garage hosting cloud storage s3</AdditionalPackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="CommunityToolkit.Aspire.Hosting.Garage.Tests" />
+  </ItemGroup>
+
+</Project>

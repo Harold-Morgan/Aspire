@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CommunityToolkit.Aspire.Hosting.Garage\CommunityToolkit.Aspire.Hosting.Garage.csproj" />
+    <ProjectReference Include="..\..\src\CommunityToolkit.Aspire.Minio.Client\CommunityToolkit.Aspire.Minio.Client.csproj" />
+    <ProjectReference Include="..\CommunityToolkit.Aspire.Testing\CommunityToolkit.Aspire.Testing.csproj" />
+  </ItemGroup>
+
+</Project>
